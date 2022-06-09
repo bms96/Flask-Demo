@@ -1,0 +1,30 @@
+{% extends "index.html"%}
+{% block title %}Register{% endblock %}
+{% block h1 %}Register{% endblock %}
+
+{% block content %}
+<p style="color:blue">Enter a username</p>
+<form action="#" method="post">
+    <p>Username:</p>
+    <p><input type="text" name="nm"></p>
+    <p>Password:</p>
+    <p><input type="password" name="pass"></p>
+    <p style="color:red"></p>
+    <p>Enter Password Again:</p>
+    <p><input type="password" name="pass_check"></p>
+    <p><input type="submit" value="submit"></p>
+
+    <p>Already have an account? <a href="{{url_for('user_login')}}">Click here</a> to sign in.</p>
+    <center><img style="margin-top: -400px; margin-left: 350px;" src="static/images/pic2.JPG"  class="rotateimg180"></center>
+
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p style="color: red">{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+</form>
+{% endblock %}

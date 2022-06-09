@@ -1,0 +1,48 @@
+{% extends "index.html"%}
+{% block title %}Third Page{% endblock %}
+{% block h1 %}Third Page{% endblock %}
+
+{% block content %}
+<p>Here is an example of an unordered list with links to different websites.</p>
+<h3>Ordered List</h3>
+<ol type="I">
+  <li>
+    <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a>
+  </li>
+  <li>
+    <a href="https://getbootstrap.com/" target="_blank">Bootstrap Website</a>
+  </li>
+  <li>
+    <a href="https://docs.python.org/3/" target="_blank">Python Documentation</a>
+  </li>
+  <li>
+    <a href="https://www.google.com/" target="_blank">Google</a>
+  </li>
+</ol>
+
+<h3>Table</h3>
+<table class="table table-bordered">
+  <thead class ="thead-dark">
+    <tr>
+      <th>First Name</th>
+      <th>Middle Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>Bryan</td>
+    <td>Michael</td>
+    <td>Santini</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Scott</td>
+    <td>Jones</td>
+  </tr>
+  <tr>
+    <td>Barry</td>
+    <td>Von</td>
+    <td>Schmidty</td>
+  </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "index.html"%}
+{% block title %}Login Form{% endblock %}
+{% block h1 %}Sign in{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p style="color: blue">{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+<p style="color:blue">Enter your username and password.</p>
+<form action="#" method="post">
+    <p>Username:</p>
+    <p><input type="text" name="nm"></p>
+    <p>Password:</p>
+    <p><input type="password" name="pass"></p>
+
+    <p><input type="submit" value="submit"></p>
+    <p>Don't have an account? <a href="{{url_for('register_user')}}">Click here</a> to sign up.</p>
+    <center><img style="margin-top: -350px; margin-left: 400px;" src="static/images/pic1.JPG"  class="rotateimg180"></center>
+</form>
+{% endblock %}
